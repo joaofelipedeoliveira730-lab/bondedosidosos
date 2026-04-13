@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Completa | Nossas Fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a página de fotos */
+        .grid-total {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .foto-expandir {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .foto-expandir:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+        .voltar {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: #6e8efb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="voltar">← Voltar para o Início</a>
+
+    <header style="height: 200px;">
+        <h1>Álbum Completo</h1>
+        <p>Arraste para baixo para ver tudo!</p>
+    </header>
+
+    <main class="grid-total">
+       <img src="c:\Users\joao.oliveira4\Desktop\ARQV\arquivo,completo" alt="">
+        </main>
+
+    <footer style="text-align: center; padding: 40px;">
+        <p>BomVelhino2026</p>
+    </footer>
+
+</body>
+</html>

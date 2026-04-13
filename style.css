@@ -1,0 +1,162 @@
+/* Reset e Estilo Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --neon-blue: #00f2ff;
+    --neon-purple: #bc13fe;
+    --bg-dark: #0a0b10;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* Recomendo importar esta fonte do Google Fonts */
+    background-color: var(--bg-dark);
+    color: #fff;
+    overflow-x: hidden;
+    /* Efeito de grade de fundo futurista */
+    background-image: 
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Menu de Navegação */
+nav {
+    background: rgba(10, 11, 16, 0.8);
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+    border-bottom: 2px solid var(--neon-blue);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+nav ul li a:hover {
+    color: var(--neon-purple);
+    text-shadow: 0 0 15px var(--neon-purple);
+}
+
+/* Header / Hero Section */
+header {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+header h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.5));
+}
+
+/* Grade de Fotos (Aba) */
+.container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.grid-total {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card de Foto Futurista */
+.foto-item, .card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 0px; /* Cantos retos ou chanfrados são mais futuristas */
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); /* Corte estilo interface */
+    transition: 0.4s;
+}
+
+.foto-item:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+    transform: scale(1.02);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(40%) contrast(120%);
+    transition: 0.5s;
+}
+
+.foto-item:hover img {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.legenda {
+    padding: 15px;
+    background: rgba(0, 242, 255, 0.1);
+    border-top: 1px solid var(--neon-blue);
+    font-size: 0.8rem;
+    color: var(--neon-blue);
+    text-transform: uppercase;
+}
+
+/* Botão Estilo Computador de Bordo */
+.botao-galeria {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.botao-galeria:hover {
+    background: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 30px var(--neon-blue);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 60px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: rgba(0, 242, 255, 0.5);
+}
