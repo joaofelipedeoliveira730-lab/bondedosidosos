@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download de Arquivos</title>
+    <style>
+        /* Estilização Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        /* Cartão Central */
+        .container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        /* Botão Estilizado */
+        .btn-drive {
+            display: inline-block;
+            background-color: #4285F4; /* Azul do Google */
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .btn-drive:hover {
+            background-color: #3367d6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+
+        .footer {
+            margin-top: 1.5rem;
+            font-size: 0.7rem;
+            color: #b2bec3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">📁</div>
+        <h1>Acesso ao Material</h1>
+        <p>Clique no botão abaixo para acessar a pasta compartilhada no Google Drive.</p>
+        
+        <a href="https://drive.google.com/drive/folders/19WRKmQ3UyZOiZ6AIif94_i_BbE5y5-XB?usp=sharing" target="_blank" class="btn-drive">
+            Abrir no Google Drive
+        </a>
+
+        <div class="footer">
+            O link abrirá em uma nova aba.
+        </div>
+    </div>
+
+</body>
+</html>
